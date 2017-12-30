@@ -1,6 +1,11 @@
 <template>
-  <div class="hello">
-    banner
+  <div class="banner">
+    <div class="left">
+
+    </div>
+    <div class="right">
+
+    </div>
   </div>
 </template>
 
@@ -11,13 +16,25 @@ export default {
     return {
       
     }
-  },
-  components:{
-    
   }
 }
 </script>
 
 <style scoped>
-
+.banner{
+  margin-top: 16px;
+}
+.left{
+  width: 589px;
+  height: 308px;
+  margin-right: 6px;
+  float: left;
+  background: yellow;
+}
+.right{
+  width: 594px;
+  height: 308px;
+  float: right;
+  background: black;
+}
 </style>

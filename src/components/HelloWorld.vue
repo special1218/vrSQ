@@ -56,9 +56,8 @@ export default {
 	}
 	.banner{
 		width: 1190px;
-		height: 319px;
+		height: 310px;
 		margin: 0 auto;
-		background: red;
 	}
 	.img1{
 		width: 1190px;
