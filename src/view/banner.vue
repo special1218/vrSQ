@@ -222,7 +222,6 @@ export default {
   height: 308px;
   margin-right: 6px;
   float: left;
-  background: yellow;
   word-wrap: break-word;
 }
 .left img{
