@@ -35,7 +35,6 @@
 		</div>
 	</div>
 </template>
-
 <script>
 	import { bbscategories } from '../api/VRhangye'
 
