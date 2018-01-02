@@ -3,7 +3,7 @@
     <top1 class="top1" style="background: #232121;"></top1>
     <banner1 class="banner"></banner1>
 		<img1 class="img1"></img1>
-    <main1></main1>
+    <main1 class="main"></main1>
     <footer1 class="footer"></footer1>
     <div id="box">
 			<a href="#"><img src="../assets/img/dingbu.png" /></a>
@@ -63,6 +63,10 @@ export default {
 		width: 1190px;
 		height: 103px;
 		margin: 0 auto;
+	}
+	.main{
+		width: 1190px;
+		margin: 0 auto; 
 	}
   .footer {
 		border-top: 1px solid #EDEDED;
