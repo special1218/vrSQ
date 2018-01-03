@@ -8,3 +8,11 @@ export function bbscategories(query){
         params: query
     })
 }
+
+export function getModelByPid(query){
+    return request({
+        url: '/bbscategories/getModelByPid',
+        methods: 'get',
+        params: query
+    })
+}

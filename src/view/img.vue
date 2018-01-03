@@ -1,16 +1,28 @@
 <template>
   <div class="img">
-    <img src="http://www.52vr.com/data/attachment/portal/201702/16/105737h9b3agppjo393zpc.gif" alt="">
+    <p  v-for="data in arr">
+       <img :src="data.url" alt="data.tooltip">
+    </p>
+    
   </div>
 </template>
 
 <script>
+
+import {imgList} from '../api/img'
+
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      
+      arr:[]
     }
+  },
+  created(){
+    imgList().then(res=>{
+      this.arr=res.data.data
+      console.log(res.data.data)
+    })
   }
 }
 </script>

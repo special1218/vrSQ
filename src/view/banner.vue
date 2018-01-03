@@ -202,7 +202,7 @@ export default {
   created(){
   	bbsslide().then(res =>{
   		this.imgData = res.data.data
-  		console.log(this.imgData)
+  		// console.log(this.imgData)
   	})
   },
   methods:{

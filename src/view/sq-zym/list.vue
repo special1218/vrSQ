@@ -1,4 +1,4 @@
-<template>
+<<template>
 <div id="app">
 	<div class="top_up">
 		<div class="top_left">
@@ -58,27 +58,14 @@
 </template>
 
 <script>
-window.onload=function(){
-  var a=document.getElementById("a1").getElementsByTagName("a")
-	var b=document.getElementById("b").getElementsByClassName("erweima")
-	for(var i=0;i<a.length;i++){
-		a[i].index=i;
-		//鼠标移入事件
-		a[i].onmouseover=function(){
-			for(var j=0;j<a.length;j++){
-				b[j].style.display="none"
-			}
-			b[this.index].style.display="block"
-		}
-		//鼠标移出事件
-		a[i].onmouseout=function(){
-			b[this.index].style.display="none"
-		}
-	}
-}
 
 export default {
- 
+  name: 'HelloWorld',
+  data () {
+    return {
+      
+    }
+  }
 }
 </script>
 
