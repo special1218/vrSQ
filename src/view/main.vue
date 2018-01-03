@@ -20,7 +20,34 @@
 			<div id="shang">
 				<h4 id="hangye">{{data.name}}</h4>
 			</div>
-			<div v-for="data in arr1" id="erji">
+      <table id="table">
+          <tr>
+            <td  v-for="data in arr1">
+              <img src="http://www.52vr.com/data/attachment/common/ec/common_3_icon.gif"/>
+              <dl>
+                <dt>
+                  <a href="" class="bt">{{data.name}}</a>
+                  <span>(39)</span>
+                </dt>
+                <dd>
+                  <span>主题：1399</span>
+                  <span>贴数：2099</span>
+                </dd>
+              </dl>
+            </td>
+          </tr>
+      </table>
+      <!-- <ul id="ul">
+        <li>
+          <img src="http://www.52vr.com/data/attachment/common/ec/common_3_icon.gif"/>
+          <p>主题: 1413</p>
+        </li>
+        <li>
+          <img src="http://www.52vr.com/data/attachment/common/ec/common_3_icon.gif"/>
+          <p>主题: 1413</p>
+        </li>
+      </ul> -->
+			<!-- <div v-for="data in arr1" id="erji">
 				<dl>
 					<dt><img src="http://www.52vr.com/data/attachment/common/ec/common_3_icon.gif"/></dt>
 					<dd>
@@ -31,7 +58,7 @@
 						</ul>
 					</dd>
 				</dl>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </template>
@@ -67,55 +94,82 @@
 </script>
 
 <style scoped>
-	.jinri {
-		width: 1190px;
-		background: white;
-	}
-	
-	#zuo li {
-		color: #666666;
-		float: left;
-		padding: 5px 20px 5px 10px;
-		text-align: center;
-		list-style: none;
-		font-size: 15px;
-	}
-	
-	#you li {
-		float: right;
-		padding: 5px 10px;
-		list-style: none;
-		font-size: 14px;
-	}
-	
-	#you li a {
-		text-decoration: none;
-		color: #9fa19f;
-	}
-	
-	#you li a:hover {
-		color: #0d58b4;
-	}
-	
-	#yx {
-		clear: both;
-		font-size: 12px;
-		padding: 0px 0px 10px 10px;
-		color: #a6a19f;
-	}
-	
-	#hangye {
-		border-left: 5px #4691f3 solid;
-		margin-top: 10px;
-		padding: 5px 10px;
-		border-top: 1px #ccc solid;
-	}
-	
-	#erji {
-		display: flex;
-	}
-	
-	.jinri dl {
+.jinri {
+  width: 1190px;
+  background: white;
+}
+
+#zuo li {
+  color: #666666;
+  float: left;
+  padding: 5px 20px 5px 10px;
+  text-align: center;
+  list-style: none;
+  font-size: 15px;
+}
+
+#you li {
+  float: right;
+  padding: 5px 10px;
+  list-style: none;
+  font-size: 14px;
+}
+
+#you li a {
+  text-decoration: none;
+  color: #9fa19f;
+}
+
+#you li a:hover {
+  color: #0d58b4;
+}
+
+#yx {
+  clear: both;
+  font-size: 12px;
+  padding: 0px 0px 10px 10px;
+  color: #a6a19f;
+}
+
+#hangye {
+  border-left: 5px #4691f3 solid;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-top: 1px #ccc solid;
+}
+.bt{
+  font-size: 16px;
+ color: #333;
+ font-weight: 400;
+  text-decoration: none;
+}
+.bt:hover{
+  color: #0d58b4;
+}
+#table{
+  word-wrap: break-word;
+  color: #666;
+  width: 100%;
+  font-size: 12px;
+  
+}
+#table tr{
+ display: flex;
+  flex-wrap: wrap;
+}
+#table tr td{
+  padding: 10px 0;
+  width: 33.3%;
+  /* display: table-cell; */
+}
+#table tr td img{
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+
+	/* .jinri dl {
 		background: white;
 		width: 300px;
 		padding: 10px 0px 10px 39.5px;
@@ -136,5 +190,5 @@
 		padding: 5px 15px 0px 0px;
 		list-style: none;
 		color: #9c9b99;
-	}
+	} */
 </style>
