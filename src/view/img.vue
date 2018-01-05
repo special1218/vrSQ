@@ -21,7 +21,6 @@ export default {
   created(){
     imgList().then(res=>{
       this.arr=res.data.data
-      console.log(res.data.data)
     })
   }
 }

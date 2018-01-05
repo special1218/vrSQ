@@ -16,3 +16,11 @@ export function getModelByPid(query){
         params: query
     })
 }
+
+export function listByPage(query){
+    return request({
+        url: '/bbsinfos/listByPage',
+        methods: 'get',
+        params: query
+    })
+}

@@ -54,17 +54,26 @@
 			<img class="search" src="../../assets/img/search.png" />
 		</div>
 	</div>
+
+	<p v-for="data in arr">{{data.title}}</p>
+
 </div>
 </template>
 
 <script>
-
+import {listByPage} from '../../api/list'
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      
+	  arr:[],
+	  id:''
     }
+  },
+  created(){
+	listByPage({category_id:this.id}).then(res=>{
+		this.arr=res.data.data
+	})
   }
 }
 </script>
