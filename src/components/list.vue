@@ -9,7 +9,7 @@
           <ul class="ul">
             <li v-for="data in arr">
               <img src="http://www.52vr.com/data/attachment/common/ec/common_3_icon.gif" alt="">
-              <p @click="pup(data.id)" class="bt">{{data.name}}（27）</p>
+              <p @click="pup(data.id)" class="bt">{{data.name}}<span style="color:orange;font-size:12px;padding-left:8px;">(26)</span></p>
               <span>主题：1399</span>
               <span style="padding-left:16px;">贴数：2099</span>
             </li>

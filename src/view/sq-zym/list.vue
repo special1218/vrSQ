@@ -61,7 +61,7 @@
 			<p v-for="data in arr">{{data.title}}</p>
 		</div>
 		<div id="right">
-
+			
 		</div>
 	</div>
 	
