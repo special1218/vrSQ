@@ -1,24 +1,26 @@
 <<template>
 <div class="app">
-	<div class="top_up">
-		<div class="top_left">
-			<a href="#">登录</a>
-			<a href="#">立即注册</a>
-			<a href="#">QQ登陆</a>
-			<a href="#">微信登陆</a>
-		</div>
-		<div class="top_right">
-			<a href="#" class="red" title="每日签到，一天学习好心情！">签到得积分 ！</a>
-			<a href="#" class="red">做任务赚积分</a>
-			<a href="#" class="orange">QQ群;8229505</a>
-			<a href="#" style="color: #999;">积分兑换</a>
-			<a>
-				<select class="sele" style="color: #999;background: none; border: none;outline: none;">
-					<option>联系我们</option>
-					<option>版权投诉</option>
-					<option>广告投放</option>
-				</select>
-			</a>
+	<div class="top">
+		<div class="top_up">
+			<div class="top_left">
+				<a href="#">登录</a>
+				<a href="#">立即注册</a>
+				<a href="#">QQ登陆</a>
+				<a href="#">微信登陆</a>
+			</div>
+			<div class="top_right">
+				<a href="#" class="red" title="每日签到，一天学习好心情！">签到得积分 ！</a>
+				<a href="#" class="red">做任务赚积分</a>
+				<a href="#" class="orange">QQ群;8229505</a>
+				<a href="#" style="color: #999;">积分兑换</a>
+				<a>
+					<select class="sele" style="color: #999;background: none; border: none;outline: none;">
+						<option>联系我们</option>
+						<option>版权投诉</option>
+						<option>广告投放</option>
+					</select>
+				</a>
+			</div>
 		</div>
 	</div>
 	<div class="top_bottom">
@@ -82,7 +84,11 @@ export default {
 <style scoped>
 .app {
 	font-size: 12px;
-	background: black;
+	background: #F5F5F5;
+}
+.top{
+	width: 100%;
+	background: #232121;
 }
 .top_up{
 	height: 28px;
@@ -180,7 +186,7 @@ export default {
 .main{
 	margin:0 auto; 
 	width: 1190px;
-	height: 200px;
+	height: 500px;
 	background: #f86a09;
 }
 </style>
