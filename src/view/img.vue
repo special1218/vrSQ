@@ -9,7 +9,7 @@
 
 <script>
 
-import {imgList} from '../api/img'
+import {imgList} from '../api/list'
 
 export default {
   name: 'HelloWorld',

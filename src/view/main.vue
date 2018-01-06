@@ -38,7 +38,6 @@
               {pid:this.pid}
           ).then(res=>{
               this.arr=res.data.data
-              // console.log(this.arr.id)
           })
       },
       components:{

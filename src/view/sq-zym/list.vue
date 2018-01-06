@@ -1,5 +1,5 @@
 <<template>
-<div id="app">
+<div class="app">
 	<div class="top_up">
 		<div class="top_left">
 			<a href="#">登录</a>
@@ -48,14 +48,15 @@
 						<a href="" hidefocus="true">VR社区</a>
 					</li>
 				</ul>
-				
 			</div>
 			<input value="请输入搜索内容" type="search" placeholder="请输入搜索内容" />
 			<img class="search" src="../../assets/img/search.png" />
 		</div>
 	</div>
-
-	<p v-for="data in arr">{{data.title}}</p>
+	<div class="main">
+			<p v-for="data in arr">{{data.title}}</p>
+	</div>
+	
 
 </div>
 </template>
@@ -63,7 +64,6 @@
 <script>
 import {listByPage} from '../../api/list'
 export default {
-  name: 'HelloWorld',
   data () {
     return {
 	  arr:[],
@@ -71,15 +71,16 @@ export default {
     }
   },
   created(){
-	listByPage({category_id:this.id}).then(res=>{
-		this.arr=res.data.data
-	})
+	  this.id=this.$route.params.id
+      listByPage({category_id:this.id}).then(res=>{
+      this.arr=res.data.data
+    })
   }
 }
 </script>
 
 <style scoped>
-#app {
+.app {
 	font-size: 12px;
 	background: black;
 }
@@ -175,5 +176,11 @@ export default {
 	color: gray;
 	width: 160px;
 	border-radius: 20px;
+}
+.main{
+	margin:0 auto; 
+	width: 1190px;
+	height: 200px;
+	background: #f86a09;
 }
 </style>

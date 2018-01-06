@@ -183,7 +183,7 @@
 
 <script>
 
-import { bbsslide } from '../api/banner'
+import { bbsslide } from '../api/list'
 import leftbanner from '../components/banner.vue'
 
 export default {
