@@ -55,8 +55,14 @@
 			<img class="search" src="../../assets/img/search.png" />
 		</div>
 	</div>
+
 	<div class="main">
+		<div id="left">
 			<p v-for="data in arr">{{data.title}}</p>
+		</div>
+		<div id="right">
+
+		</div>
 	</div>
 	
 
@@ -132,10 +138,9 @@ export default {
 	color: #ff7300;
 }
 .top_bottom{
-	width: 1366px;
+	width: 100%;
 	height: 170px;
-	margin: 0 auto;
-	background-image:url(../../assets/img/default.jpg) ;
+	background-image:url(../../assets/img/default.jpg);
 }
 .nv{
 	width: 1190px;
@@ -187,6 +192,20 @@ export default {
 	margin:0 auto; 
 	width: 1190px;
 	height: 500px;
-	background: #f86a09;
+	margin-top: 30px; 
+}
+#left{
+	width: 190px;
+	height: 200px;
+	border: 1px solid #E8E8E8;
+	background: white;
+	float: left;
+}
+#right{
+	width: 970px;
+	height: 500px;
+	background: white;
+	border: 1px solid #E8E8E8;
+	float: right;
 }
 </style>
