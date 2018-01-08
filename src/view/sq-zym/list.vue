@@ -59,13 +59,14 @@
 	<div class="main">
 		<div id="left">
 			<div v-for="data in arr">
+				<img :src="data.thumbnail"/>
 				<p>{{data.title}}</p>
 			    
 			</div>
 			
 		</div>
 		<div id="right">
-			<img v-for="data in arr" :src="data.thumbnail"/>
+			
 		</div>
 	</div>
 	
