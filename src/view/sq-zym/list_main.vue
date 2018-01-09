@@ -13,7 +13,7 @@
 			<div class="right">
 				<div class="right_top">
 					<span class="span1">共有<span class="span2">149</span>篇帖子</span>
-					<button class="btn1">我要发帖</button>
+					<button class="btn1" @click="send()">我要发帖</button>
 				</div>
 				<div class="right_main">
 					<div class="aa">
@@ -41,6 +41,11 @@ export default {
       listByPage({category_id:this.id}).then(res=>{
       this.arr=res.data.data
     })
+  },
+  methods:{
+	  send(){
+		  this.$router.push({path:'/addPost'})
+	  }
   }
 }
 

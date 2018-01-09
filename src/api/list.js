@@ -41,3 +41,12 @@ export function listByPage(query){
         params: query
     })
 }
+
+//添加帖子列表
+export function addPost(data){
+    return request({
+        url: '/bbsinfos/add',
+        methods: 'post',
+        data
+    })
+}
