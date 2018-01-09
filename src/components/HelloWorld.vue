@@ -7,7 +7,7 @@
 		<footer1 class="footer"></footer1>
 	</div>
 </template>
-
+ 
 <script>
 	import top1 from '../view/top.vue'
 	import banner1 from '../view/banner.vue'
@@ -68,6 +68,6 @@
 		border-top: 1px solid #EDEDED;
 		clear: both;
 		width: 100%;
-		height: 103px;
+		height: 203px;
 	}
 </style>
