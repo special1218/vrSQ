@@ -8,13 +8,13 @@
 					<img src="http://www.52vr.com/static/image/common/online_admin.gif" /> 管理员
 				</li>
 				<li>
-					<img src="http://www.52vr.com/static/image/common/online_supermod.gif" /> 管理员
+					<img src="http://www.52vr.com/static/image/common/online_supermod.gif" /> 超级版主
 				</li>
 				<li>
-					<img src="http://www.52vr.com/static/image/common/online_moderator.gif" /> 管理员
+					<img src="http://www.52vr.com/static/image/common/online_moderator.gif" /> 版主
 				</li>
 				<li>
-					<img src="http://www.52vr.com/static/image/common/online_member.gif" /> 管理员
+					<img src="http://www.52vr.com/static/image/common/online_member.gif" /> 会员
 				</li>
 			</ul>
 
@@ -75,6 +75,7 @@
 	}
 	
 	#zaixian {
+		font-size: 14px;
 		width: 1190px;
 		background: white;
 		margin: 0 auto;
