@@ -7,7 +7,7 @@
 		<footer1 class="footer"></footer1>
 	</div>
 </template>
-
+ 
 <script>
 	import top1 from '../view/top.vue'
 	import banner1 from '../view/banner.vue'
