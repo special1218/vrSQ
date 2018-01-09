@@ -68,6 +68,6 @@
 		border-top: 1px solid #EDEDED;
 		clear: both;
 		width: 100%;
-		height: 203px;
+		height: 103px;
 	}
 </style>
