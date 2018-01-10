@@ -24,7 +24,7 @@
 </template>
 
 <script>
-  import list from '../sq-zym/list.vue'
+  import list from '../../components/list.vue'
   import {getModelByPid} from '../../api/list'
 	export default {
 		data() {
