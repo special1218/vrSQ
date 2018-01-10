@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <div class="left">
-        <leftbanner :arr="imgData"></leftbanner>
+        <!-- <leftbanner :arr="imgData"></leftbanner> -->
     </div>
     <div class="right">
         <div class="top">
@@ -183,8 +183,8 @@
 
 <script>
 
-import { bbsslide } from '../api/list'
-import leftbanner from '../components/banner.vue'
+import { bbsslide } from '../../api/list'
+import leftbanner from '../../components/banner.vue'
 
 export default {
   name: 'HelloWorld',

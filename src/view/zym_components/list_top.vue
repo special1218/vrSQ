@@ -64,8 +64,7 @@
 <style scoped="scoped">
 .app {
 	font-size: 12px;
-	background: ghostwhite;
-	margin-bottom: 30px
+	
 }
 .top_box{
 	width: 100%;

@@ -24,7 +24,7 @@
 	<div class="top_bottom">
 		<div class="logo">
 			<div class="logo_left">
-				<img src="../assets/img/top_logo.png"/>
+				<img src="../../assets/img/top_logo.png"/>
 				<a href="#" class="top_bottom_a">专业VR技术开发社区,始建于2006年</a>
 			</div>
 			<div class="logo_right">

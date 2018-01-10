@@ -37,7 +37,7 @@ export default {
   },
   methods:{
       pup(id){
-        this.$router.push('/list/'+id)
+        this.$router.push({path:'/list/'+id})
       }
     }
 }
