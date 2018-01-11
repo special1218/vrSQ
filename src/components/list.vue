@@ -27,7 +27,8 @@ export default {
   props:['name','id'],
   data(){
       return{
-        arr: []
+        arr: [],
+        title: 'sss'
       }
   },
   created(){
@@ -37,6 +38,7 @@ export default {
   },
   methods:{
       pup(id){
+        // this.$router.push({path:'/list/'+id+'/'+this.title})
         this.$router.push({path:'/list/'+id})
       }
     }

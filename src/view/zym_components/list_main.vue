@@ -1,13 +1,15 @@
 <template>
 <div class="main">
 	<div class="left">
-		<div class="img">
-			<!-- <img :src="img" />
-			<p>{{title}}</p> -->
+		<div class="top">
+			<img :src="img" alt="">
 		</div>
-		
-		<span style="border-right: 1px solid gainsboro; margin-left: 30px;">1<br />今日</span>
-		<span>93<br />主题</span>
+
+		<div class="bottom">
+			<h3 class="h3">{{title}}</h3>
+			<span style="border-right: 1px solid gainsboro; margin-left: 30px;">1<br />今日</span>
+			<span>93<br />主题</span>
+		</div>
 	</div>
 	<div class="right">
 		<div class="right_top">
@@ -26,12 +28,13 @@
 
 <script>
 
-import {listByPage} from '../../api/list'
+import {listByPage,getModelById} from '../../api/list'
 export default {
-  props:["title","img"],
   data () {
     return {
 	  arr:[],
+	  title:'',
+	  img:'',
 	  id:''
     }
   },
@@ -39,7 +42,11 @@ export default {
 	  this.id=this.$route.params.id
       listByPage({category_id:this.id}).then(res=>{
       this.arr=res.data.data
-    })
+	})
+	getModelById({id:this.id}).then(res=>{
+		this.title=res.data.data.name
+		this.img=res.data.data.thumbnail
+	})
   },
   methods:{
 	  send(){
@@ -50,23 +57,33 @@ export default {
 </script>
 
 <style scoped="scoped">
-/* .main{
-	margin:0 auto; 
-	width: 1190px;
-} */
 .left{
 	border: 1px solid beige;
 	float: left;
 	text-align: center;
-	position: relative;
 	width: 180px;
 	background: white;
 }
-.img img{
+.top{
+	position: relative;
+	width: 180px;
+	height: 80px;
+}
+.top img{
+	width: 118px;
+	height: 118px;
 	position: absolute;
+	left: 30px;
 	top: -60px;
-	left: 20px;
 	border-radius: 50%;
+    box-shadow: 0px -1px 6px #DDD;
+}
+.bottom{
+	width: 180px;
+	height: 120px;
+}
+.h3{
+	margin-bottom: 26px;
 }
 .left span{
 	float: left;

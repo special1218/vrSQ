@@ -4,6 +4,7 @@
 		<banner1 class="banner"></banner1>
 		<img1 class="img1"></img1>
 		<main1 class="main"></main1>
+		<fot class="fot"></fot>
 		<footer1 class="footer"></footer1>
 	</div>
 </template>
@@ -13,6 +14,7 @@ import top1 from '../view/main_components/top.vue'
 import banner1 from '../view/main_components/banner.vue'
 import img1 from '../view/main_components/img.vue'
 import main1 from '../view/main_components/main.vue'
+import fot from '../view/main_components/fot.vue'
 import footer1 from '../view/main_components/footer.vue'
 
 export default {
@@ -27,6 +29,7 @@ export default {
 		banner1,
 		img1,
 		main1,
+		fot,
 		footer1
 	}
 }
@@ -56,6 +59,12 @@ export default {
 }
 .main {
 	width: 1190px;
+	margin: 0 auto;
+	margin-bottom: 8px;
+}
+.fot{
+	width: 1190px;
+	height: 126px;
 	margin: 0 auto;
 }
 .footer {

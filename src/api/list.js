@@ -33,10 +33,28 @@ export function getModelByPid(query){
     })
 }
 
+//根据id渲染帖子列表
+export function bbsinfosList(query){
+    return request({
+        url: '/bbsinfos/list',
+        methods: 'get',
+        params: query
+    })
+}
+
 //根据id渲染子页面
 export function listByPage(query){
     return request({
         url: '/bbsinfos/listByPage',
+        methods: 'get',
+        params: query
+    })
+}
+
+//根据id渲染子页面
+export function getModelById(query){
+    return request({
+        url: '/bbscategories/getModelById',
         methods: 'get',
         params: query
     })
