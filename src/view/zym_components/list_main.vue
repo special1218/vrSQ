@@ -39,6 +39,7 @@ export default {
     }
   },
   created(){
+	  document.documentElement.scrollTop = 0
 	  this.id=this.$route.params.id
       listByPage({category_id:this.id}).then(res=>{
       this.arr=res.data.data

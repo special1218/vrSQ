@@ -74,18 +74,32 @@ export default {
       arr:[],
       arr1:[],
       arr2:[],
-      arr3:[]
+      arr3:[],
+      time:''
     }
   },
   components: {
 		leftbanner
-	},
+  },
+  // watch:{
+  //   uuu(val){
+  //     console.log(val)
+  //   }
+  // },
+  // filters:{
+  //   uuu(val){
+  //     if(!val) return ''
+  //     val=val.slice(3,5)
+  //     return val
+  //   }
+  // },
   created(){
   	bbsslide().then(res =>{
   		this.imgData = res.data.data
   	}),
   	bbsinfosList({limit:9}).then(res =>{
   		this.arr = res.data.data
+      // this.time=res.data.data.create_time
   	}),
   	listByPage({
   		page:1,
@@ -102,7 +116,7 @@ export default {
   		this.arr3 = res.data.data
   	})
   	bbsinfosList({
-  		limit:9,
+  		limit:6,
   		byUpdateTime:true
   	}).then(res =>{
   		this.arr2 = res.data.data
