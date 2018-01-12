@@ -46,7 +46,7 @@ export function listByPage(query){
 export function addPost(data){
     return request({
         url: '/bbsinfos/add',
-        methods: 'post',
+        method: 'post',
         data
     })
 }
