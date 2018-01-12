@@ -1,177 +1,54 @@
 <template>
   <div class="banner">
     <div class="left">
-        <!-- <leftbanner :arr="imgData"></leftbanner> -->
+        <leftbanner :arr="imgData"></leftbanner>
     </div>
     <div class="right">
         <div class="top">
           <ul id="ul1">
             <li @mouseover="mose(1)"><a href="">最新帖子</a></li>
             <li @mouseover="mose(2)"><a href="">最新回复</a></li>
-            <li @mouseover="mose(3)"><a href="">人才招聘</a></li>
-            <li @mouseover="mose(4)"><a href="">外包项目</a></li>
+            <li @mouseover="mose(3)"><a href="">VR聊吧</a></li>
+            <li @mouseover="mose(4)"><a href="">VR案例</a></li>
           </ul>
         </div>
-
-
         <div id="bottom">
-
             <div v-if="show==1">
               <ul>
-                <li>
-                  <a href="" class="blue"> Vega Prime |  </a>
-                  <a href="" class="black" title="书讯《Vega Prime开发与仿真应用》已出版,">书讯《Vega Prime开发与仿真应用》已出版,</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> UE4视频教学 |  </a>
-                  <a href="" class="black" title="求助！请教大家关于云层可视化的问题,">求助！请教大家关于云层可视化的问题,</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> Vega Prime |  </a>
-                  <a href="" class="black" title="【UE4】3分钟教你环绕拍摄,">【UE4】3分钟教你环绕拍摄</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> VR来哦吧 |  </a>
-                  <a href="" class="black" title="虚幻引擎4 - RPG入门套件">虚幻引擎4 - RPG入门套件</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> UE4蓝图C++ |  </a>
-                  <a href="" class="black" title="【UE4资源】 Koola's Snow 雪景">【UE4资源】 Koola's Snow 雪景</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> VR聊吧 |  </a>
-                  <a href="" class="black" title="UE4教程：游戏开发案例蓝图视频教程">UE4教程：游戏开发案例蓝图视频教程</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> UE4资源 |  </a>
-                  <a href="" class="black" title="书讯《Vega Prime开发与仿真应用》已出版,">书讯《Vega Prime开发与仿真应用》已出版,</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> UE4资源 |  </a>
-                  <a href="" class="black" title="湖边的小屋自然包">湖边的小屋自然包</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> UE4资源 |  </a>
-                  <a href="" class="black" title="Unreal Engine 4独立游戏制作编程教学">Unreal Engine 4独立游戏制作编程教学</a>
-                    <span class="gray">&nbsp;11-30</span>
+                <li v-for="data in arr">
+                  <a href="" class="blue"> {{data.title}}|  </a>
+                  <a href="" class="black">{{data.content}}</a>
+                    <span class="gray">&nbsp;{{data.create_time}}</span>
                 </li>
               </ul>
             </div>
 
             <div v-if="show==2">
               <ul>
-                <li>
-                  <a href="" class="blue"> Vega Prime |  </a>
-                  <a href="" class="black" title="书讯《Vega Prime开发与仿真应用》已出版,">书讯《Vega Prime开发与仿真应用》已出版,</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> UE4视频教学 |  </a>
-                  <a href="" class="black" title="求助！请教大家关于云层可视化的问题,">求助！请教大家关于云层可视化的问题,</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> Vega Prime |  </a>
-                  <a href="" class="black" title="【UE4】3分钟教你环绕拍摄,">【UE4】3分钟教你环绕拍摄</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> VR来哦吧 |  </a>
-                  <a href="" class="black" title="虚幻引擎4 - RPG入门套件">虚幻引擎4 - RPG入门套件</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> UE4蓝图C++ |  </a>
-                  <a href="" class="black" title="【UE4资源】 Koola's Snow 雪景">【UE4资源】 Koola's Snow 雪景</a>
-                    <span class="gray">&nbsp;11-30</span>
-                </li>
-                <li>
-                  <a href="" class="blue"> VR聊吧 |  </a>
-                  <a href="" class="black" title="UE4教程：游戏开发案例蓝图视频教程">UE4教程：游戏开发案例蓝图视频教程</a>
-                    <span class="gray">&nbsp;11-30</span>
+                <li v-for="data in arr2">
+                  <a href="" class="blue"> {{data.title}} |  </a>
+                  <a href="" class="black" title="书讯《Vega Prime开发与仿真应用》已出版,">{{data.content}}</a>
+                    <span class="gray">&nbsp;{{data.update_time}}</span>
                 </li>
               </ul>
             </div>
 
             <div v-if="show==3">
               <ul>
-                <li>
+                <li v-for="data in arr1">
                     <span class="blue">•</span>
-                    <a href="" class="black" title="销售专员（VR/AR方向）">销售专员（VR/AR方向）</a>
-                    <span class="gray"> 10-24 </span>
-                </li>
-                <li>
-                    <span class="blue">•</span>
-                    <a href="" class="black" title="需求分析师">需求分析师</a>
-                    <span class="gray"> 10-24 </span>
-                </li>
-                <li>
-                    <span class="blue">•</span>
-                    <a href="" class="black" title="市场总监（有期权）">市场总监（有期权）</a>
-                    <span class="gray"> 10-24 </span>
-                </li>
-                <li>
-                    <span class="blue">•</span>
-                    <a href="" class="black" title="U3D软件工程师">U3D软件工程师</a>
-                    <span class="gray"> 10-24 </span>
-                </li>
-                <li>
-                    <span class="blue">•</span>
-                    <a href="" class="black" title="Unity3d开发工程师">Unity3d开发工程师</a>
-                    <span class="gray"> 10-24 </span>
-                </li>
-                <li>
-                    <span class="blue">•</span>
-                    <a href="" class="black" title="销售专员（VR/AR方向）">销售专员（VR/AR方向）</a>
-                    <span class="gray"> 10-24 </span>
-                </li>
-                <li>
-                    <span class="blue">•</span>
-                    <a href="" class="black" title="需求分析师">需求分析师</a>
-                    <span class="gray"> 10-24 </span>
-                </li>
-                <li>
-                    <span class="blue">•</span>
-                    <a href="" class="black" title="市场总监（有期权）">市场总监（有期权）</a>
-                    <span class="gray"> 10-24 </span>
+                    <a href="" class="black">{{data.content}}</a>
+                    <span class="gray">{{data.create_time}} </span>
                 </li>
               </ul>
             </div>
 
             <div v-if="show==4">
               <ul>
-                <li>
+                <li v-for="data in arr3">
                     <span class="blue">•</span>
-                    <a href="" class="black" title="销售专员（VR/AR方向）">销售专员（VR/AR方向）</a>
-                    <span class="gray"> 10-24 </span>
-                </li>
-                <li>
-                    <span class="blue">•</span>
-                    <a href="" class="black" title="需求分析师">需求分析师</a>
-                    <span class="gray"> 10-24 </span>
-                </li>
-                <li>
-                    <span class="blue">•</span>
-                    <a href="" class="black" title="市场总监（有期权）">市场总监（有期权）</a>
-                    <span class="gray"> 10-24 </span>
-                </li>
-                <li>
-                    <span class="blue">•</span>
-                    <a href="" class="black" title="U3D软件工程师">U3D软件工程师</a>
-                    <span class="gray"> 10-24 </span>
-                </li>
-                <li>
-                    <span class="blue">•</span>
-                    <a href="" class="black" title="Unity3d开发工程师">Unity3d开发工程师</a>
-                    <span class="gray"> 10-24 </span>
+                    <a href="" class="black" title="销售专员（VR/AR方向）">{{data.content}}</a>
+                    <span class="gray"> {{data.create_time}} </span>
                 </li>
               </ul>
             </div>
@@ -183,7 +60,7 @@
 
 <script>
 
-import { bbsslide } from '../../api/list'
+import { bbsslide, bbsinfosList, listByPage } from '../../api/list'
 import leftbanner from '../../components/banner.vue'
 
 export default {
@@ -193,7 +70,11 @@ export default {
       loop: true,
       autoPlay: true,
       imgData: [],
-      show:1
+      show:1,
+      arr:[],
+      arr1:[],
+      arr2:[],
+      arr3:[]
     }
   },
   components: {
@@ -202,7 +83,29 @@ export default {
   created(){
   	bbsslide().then(res =>{
   		this.imgData = res.data.data
-  		// console.log(this.imgData)
+  	}),
+  	bbsinfosList({limit:9}).then(res =>{
+  		this.arr = res.data.data
+  	}),
+  	listByPage({
+  		page:1,
+  		limit:9,
+  	  category_id:7
+  	}).then(res =>{
+  		this.arr1 = res.data.data
+  	}),
+  	listByPage({
+  		page:1,
+  		limit:9,
+  	  category_id:8
+  	}).then(res =>{
+  		this.arr3 = res.data.data
+  	})
+  	bbsinfosList({
+  		limit:9,
+  		byUpdateTime:true
+  	}).then(res =>{
+  		this.arr2 = res.data.data
   	})
   },
   methods:{

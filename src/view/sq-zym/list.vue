@@ -26,7 +26,7 @@ export default {
     footer1
   },
   created(){
-    // this.$router.beforeEach((to,from,next)=>{
+    // router.beforeEach((to,from,next)=>{
     //   document.body.scrollTop=0;
     //   next();
     // })
@@ -50,7 +50,6 @@ export default {
   padding-top: 30px;
   width: 1190px;
   margin: 0 auto;
-  height: 100vh;
 }
 .footer {
 	border-top: 1px solid #red;
