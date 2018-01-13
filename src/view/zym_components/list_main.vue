@@ -18,7 +18,7 @@
 		</div>
 		<div class="right_main">
 			<div class="aa" v-for="data in arr">
-				<h3>{{data.title}}</h3>
+				<h3 @click="pup(data.id)">{{data.title}}</h3>
 				<p>obuli | 2016-12-27发表  | Sixiaoying 于前天 03:00 PM 参与评论</p>
 			</div>
 		</div>
@@ -52,6 +52,9 @@ export default {
   methods:{
 	  send(){
 		  this.$router.push({path:'/addPost'})
+	  },
+	  pup(id){
+		  this.$router.push({path:'/xqy/'+id})
 	  }
   }
 }

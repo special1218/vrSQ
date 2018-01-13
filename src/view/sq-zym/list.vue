@@ -1,9 +1,7 @@
 <template>
 <div class="app">
   	<top2 class="top2"></top2>
-    <!-- <div v-for="data in arr"> -->
-      <main2 class="main2"></main2>
-    <!-- </div> -->
+    <main2 class="main2"></main2>
     <footer1 class="footer"></footer1>
 </div>
 </template>
@@ -26,10 +24,6 @@ export default {
     footer1
   },
   created(){
-    // router.beforeEach((to,from,next)=>{
-    //   document.body.scrollTop=0;
-    //   next();
-    // })
 	  this.id=this.$route.params.id
       listByPage({category_id:this.id}).then(res=>{
       this.arr=res.data.data

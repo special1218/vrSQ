@@ -12,7 +12,7 @@
 		<p>
 			thumbnail：<input type="text"/>
 		</p>
-		<button class="submit()">提交</button>
+		<button @click="submit()">提交</button>
 	</div>
 </template>
 
@@ -22,12 +22,12 @@ export default {
 	name: 'app',
 	data(){
 		return{
-
+			id:''
 		}
 	},
 	methods:{
 		submit(){
-
+			this.$router.push({path:'/list'})
 		}
 	}
 }

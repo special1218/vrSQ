@@ -1,6 +1,6 @@
 <template>
-	<div class="app">
-		<div class="top_box">
+	<div id="app">
+		<div class="nav">
 			<div class="top_up">
 				<div class="top_left">
 					<a href="#">登录</a>
@@ -23,36 +23,42 @@
 				</div>
 			</div>
 		</div>
-		<div class="top_bottom">
-			<div class="nv">
-				<img src="../../assets/img/top_logo.png"/>
-				<div class="nv_left">
-					<ul>
+
+		<div class="bottom">
+			<div class="top_bottom">
+
+				<div class="bottom_left">
+					<img class="logo" style="z-index: 100" src="http://www.52vr.com/template/qu_business/img/logo.png" alt="">
+				</div>
+				<div class="bottom_center">
+					<ul style="z-index: 10;">
 						<li>
-							<a href="" hidefocus="true" title="Portal">首页</a>
+							<a href="">首页</a>
 						</li>
 						<li>
-							<a href="" hidefocus="true">VR资讯</a>
+							<a href="">VR资讯</a>
 						</li>
 						<li>
-							<a href="" hidefocus="true">VR教程</a>
+							<a href="">VR教程</a>
 						</li>
 						<li>
-							<a href="" hidefocus="true">招聘外包</a>
+							<a href="">招聘外包</a>
 						</li>
 						<li>
-							<a href="" hidefocus="true" style="color: orange">虚幻引擎</a>
+							<a href="" style="color: #FFA500;">虚幻引擎</a>
 						</li>
 						<li>
-							<a href="" hidefocus="true">VR公开课</a>
+							<a href="">VR公开课</a>
 						</li>
 						<li>
-							<a href="" hidefocus="true">VR社区</a>
+							<a href="">VR社区</a>
 						</li>
 					</ul>
 				</div>
-				<input type="search" placeholder="请输入搜索内容" style="outline:none" />
-				<img class="search" src="../../assets/img/search.png" />
+				<div class="bottom_right">
+					<input type="text" placeholder="请输入搜索内容" />
+					<button type="submit"><img src="../../assets/img/search.png" alt=""></button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -61,14 +67,14 @@
 <script>
 </script>
 
-<style scoped="scoped">
-.app {
+<style scoped>
+#app {
 	font-size: 12px;
-	
 }
-.top_box{
+.nav{
 	width: 100%;
-	background: black;
+	height: 28px;
+	background: #232121;
 }
 .top_up{
 	height: 28px;
@@ -76,7 +82,7 @@
 	margin: 0 auto;
 }
 .top_left{
-    width: 260px;
+	width: 260px;
     height: 28px;
     line-height: 28px;   
     float: left;                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
@@ -111,56 +117,66 @@
 .orange:hover{
 	color: #ff7300;
 }
-.top_bottom{
+
+.bottom{
 	width: 100%;
 	height: 170px;
-	margin: 0 auto;
-	background-image:url(../../assets/img/default.jpg) ;
+	background: url(http://www.52vr.com/data/attachment/common/a8/common_4_banner.jpg) no-repeat center 0;
 }
-.nv{
+.top_bottom{
 	width: 1190px;
-	height: 40px;
+	height: 136px;
 	margin: 0 auto;
 	padding-top: 10px;
-	position: relative;
 }
-.search{
-	position: absolute;
-	top: 17px;
-	right: 45px;
-}
-.nv img{
+.bottom_left{
 	float: left;
+	width: 208px;
+	height: 62px;
 }
-.nv_left{
-	width: 800px;
-	height: 40px;
+.bottom_center{
+	margin-left: 12px;
 	float: left;
+	width: 593px;
+	height: 44px;
 }
-.nv_left ul li{
+.bottom_center ul{
+	padding-left: 0px;
+}
+.bottom_center ul li{
+	float: left;
 	list-style: none;
-	float: left;
-	height: 40px;
-    line-height: 40px;
-    font-weight: 400;
-    font-size: 14px;
-    margin-right: 5px;
+	text-align: center;
+	padding: 0 18px;
 }
-.nv_left ul li a{
-	float: left;
+.bottom_center ul li a {
 	text-decoration: none;
+	font-size: 14px;
+	display: block;
 	color: white;
-	padding: 0 20px;
-	height: 40px;
-    line-height: 40px;
 }
-.nv input{
-	background: black;
-	padding-left: 10px;
-	border: none;
-	height: 30px;
-	color: gray;
-	width: 160px;
+.bottom_right {
+	width: 152px;
+	background: #000000;
+	color: #B6B6B6;
+	height: 28px;
 	border-radius: 20px;
+	float: right;
+	padding: 0px 10px;
+}
+.bottom_right input{
+	width: 100px;
+	border: none;
+	margin-top: 8px;
+	background: none;
+	font-size: 12px;
+}
+.bottom_right button{
+	width: 20px;
+	height: 20px;
+	float: right;
+	margin-top: 7px;
+	background: none;
+	border: none;
 }
 </style>

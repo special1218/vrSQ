@@ -18,7 +18,7 @@
                 <li v-for="data in arr">
                   <a href="" class="blue"> {{data.title}}|  </a>
                   <a href="" class="black">{{data.content}}</a>
-                    <span class="gray">&nbsp;{{data.create_time}}</span>
+                    <span class="gray">&nbsp;{{time0}}</span>
                 </li>
               </ul>
             </div>
@@ -28,7 +28,7 @@
                 <li v-for="data in arr2">
                   <a href="" class="blue"> {{data.title}} |  </a>
                   <a href="" class="black" title="书讯《Vega Prime开发与仿真应用》已出版,">{{data.content}}</a>
-                    <span class="gray">&nbsp;{{data.update_time}}</span>
+                    <span class="gray">&nbsp;{{time}}</span>
                 </li>
               </ul>
             </div>
@@ -38,7 +38,7 @@
                 <li v-for="data in arr1">
                     <span class="blue">•</span>
                     <a href="" class="black">{{data.content}}</a>
-                    <span class="gray">{{data.create_time}} </span>
+                    <span class="gray">{{time}} </span>
                 </li>
               </ul>
             </div>
@@ -48,7 +48,7 @@
                 <li v-for="data in arr3">
                     <span class="blue">•</span>
                     <a href="" class="black" title="销售专员（VR/AR方向）">{{data.content}}</a>
-                    <span class="gray"> {{data.create_time}} </span>
+                    <span class="gray"> {{time}} </span>
                 </li>
               </ul>
             </div>
@@ -72,54 +72,55 @@ export default {
       imgData: [],
       show:1,
       arr:[],
+      farr:[],
       arr1:[],
       arr2:[],
       arr3:[],
+      time0:'',
       time:''
     }
   },
   components: {
 		leftbanner
   },
-  // watch:{
-  //   uuu(val){
-  //     console.log(val)
-  //   }
-  // },
-  // filters:{
-  //   uuu(val){
-  //     if(!val) return ''
-  //     val=val.slice(3,5)
-  //     return val
-  //   }
-  // },
   created(){
   	bbsslide().then(res =>{
   		this.imgData = res.data.data
   	}),
   	bbsinfosList({limit:9}).then(res =>{
   		this.arr = res.data.data
-      // this.time=res.data.data.create_time
+      for(var i=0;i<this.arr.length;i++){
+          this.time0=this.arr[i].create_time.slice(11,16)
+      }
   	}),
   	listByPage({
   		page:1,
   		limit:9,
   	  category_id:7
   	}).then(res =>{
-  		this.arr1 = res.data.data
+      this.arr1 = res.data.data
+      for(var i=0;i<this.arr1.length;i++){
+          this.time=this.arr1[i].create_time.slice(5,10)
+      }
   	}),
   	listByPage({
   		page:1,
   		limit:9,
   	  category_id:8
   	}).then(res =>{
-  		this.arr3 = res.data.data
+      this.arr3 = res.data.data
+      for(var i=0;i<this.arr3.length;i++){
+          this.time=this.arr3[i].create_time.slice(5,10)
+      }
   	})
   	bbsinfosList({
-  		limit:6,
+  		limit:7,
   		byUpdateTime:true
   	}).then(res =>{
-  		this.arr2 = res.data.data
+      this.arr2 = res.data.data
+      for(var i=0;i<this.arr2.length;i++){
+          this.time=this.arr2[i].create_time.slice(5,10)
+      }
   	})
   },
   methods:{
@@ -207,6 +208,7 @@ export default {
 .gray{
   color: #999;
   font-size: 12px;
+  padding-left: 6px;
 }
 .blue{
   color: #4691f3;
