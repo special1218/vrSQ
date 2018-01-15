@@ -16,7 +16,7 @@ export default new Router({
       component: HelloWorld
     },
     {path:'/list/:id',component:list},
-    {path:'/xqy/:id',component:xqy},
+    {path:'/list/:category_id',component:list},
     {path:'/addPost',component:addPost}
   ]
 })
