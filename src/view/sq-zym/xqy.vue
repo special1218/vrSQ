@@ -1,14 +1,18 @@
 <template>
 	<div id="hello">
 		<top1 class="top1"></top1>
-		<main1 class="main1"></main1>
+		<div class="main">
+			<left class="left"></left>
+		    <right class="right"></right>
+		</div>
 		<footer1 class="footer"></footer1>
 	</div>
 </template>
  
 <script>
-import top1 from '../zym_components/detailsTop.vue'
-import main1 from '../zym_components/detailsMain.vue'
+import top1 from '../details/detailsTop.vue'
+import left from '../details/detailsLeft.vue'
+import right from '../details/detailsRight.vue'
 import footer1 from '../main_components/footer.vue'
 
 export default {
@@ -20,7 +24,8 @@ export default {
 	},
 	components: {
 		top1,
-		main1,
+		left,
+		right,
 		footer1
 	}
 }
@@ -35,8 +40,16 @@ export default {
 	height: 200px;
 	margin-bottom: 30px;
 }
-.main1{
-	width: 100%;
+.main{
+	background: #F5F5F5;
+	width: 1190px;
+	margin:0 auto; 
+}
+.left{
+	float: left;
+}
+.right{
+	float: left;
 }
 .footer {
     position: fixed;

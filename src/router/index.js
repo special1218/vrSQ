@@ -17,6 +17,7 @@ export default new Router({
     },
     {path:'/list/:id',component:list},
     {path:'/list/:category_id',component:list},
+    {path:'/xqy/:id',component:xqy},
     {path:'/addPost',component:addPost}
   ]
 })

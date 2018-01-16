@@ -19,7 +19,7 @@
 		<div class="right_main">
 			<div class="aa" v-for="data in arr">
 				<h3 @click="pup(data.id)">{{data.title}}</h3>
-				<p>obuli | 2016-12-27发表  | Sixiaoying 于前天 03:00 PM 参与评论</p>
+				<p>bobuli | 2016-12-27发表  | Sixiaoying 于前天 03:00 PM 参与评论</p>
 			</div>
 		</div>
 	</div>
@@ -39,6 +39,7 @@ export default {
     }
   },
   created(){
+	//   localstorage.getItem("1")
 	  document.documentElement.scrollTop = 0
 	  this.id=this.$route.params.id
       listByPage({category_id:this.id}).then(res=>{
@@ -50,8 +51,11 @@ export default {
 	})
   },
   methods:{
+	  
 	  send(){
-		  this.$router.push({path:'/addPost'})
+		//   if(token){
+			  this.$router.push({path:'/addPost'})
+		//   }
 	  },
 	  pup(id){
 		  this.$router.push({path:'/xqy/'+id})

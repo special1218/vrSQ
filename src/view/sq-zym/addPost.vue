@@ -12,9 +12,6 @@
 		<p>
 			creater_id：<input type="text" v-model="temp.creater_id" />
 		</p>
-		<!--<p>
-			thumbnail：<input type="text" v-model="thumbnail" />
-		</p>-->
 		<p><button @click="submit(temp.category_id)">提交</button></p>
 	</div>
 </template>
@@ -29,8 +26,7 @@
 					title: '',
 					content: '',
 					category_id: '',
-					creater_id: '',
-					//				thumbnail: ''
+					creater_id: ''
 				},
 			}
 		},
@@ -46,11 +42,6 @@
 				})
 			}
 		}
-
-
-
-
-
 	}
 </script>
 
