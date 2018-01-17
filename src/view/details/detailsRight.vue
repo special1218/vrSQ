@@ -1,5 +1,5 @@
 <template>
-  <div id="app" style="margin-bottom:130px">
+  <div id="app">
     <h2 >市场总监（有期权）</h2>
     <p>发表时间：2018-1-3 10:27 | 浏览：123 评论：0<button>回复</button></p>
     <div id="">
@@ -46,7 +46,6 @@
       </tr>
       </tbody>
       </table>
-     <!-- {{detail}}-->
     </div>
     <div>
       <table>
@@ -69,11 +68,12 @@ export default {
     }
   },
   created(){
+
     // getposition().then((res)=>{
     //   // console.log(888,this.$route.params);
     //   this.id=this.$route.params.id;
     //   this.arr=res.data.data;
-    //   this.arr=this.arr.filter(item=>{
+    //   this.arr=this.rar.filter(item=>{
     //     if(item.id==this.id){
     //       return true;
     //     }
@@ -114,14 +114,16 @@ export default {
   font-size: 12px;
 }
 #app p button{
+  margin: 6px 8px;
   float: right;
   border: none;
   background: #515151 !important;
   border-radius: 3px;
   color: white;
-  padding: 0 5px;
+  padding: 3px 4px;
 }
 #app p button:hover{
+  border: none;
   background: #f60 !important;
 }
 

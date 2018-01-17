@@ -49,11 +49,9 @@ export default {
 	float: left;
 }
 .right{
-	float: left;
+	float: right;
 }
 .footer {
-    position: fixed;
-    bottom: 0;
 	background: #F5F5F5;
 	border-top: 1px solid #EDEDED;
 	width: 100%;

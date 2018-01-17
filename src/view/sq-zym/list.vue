@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style scoped="scoped">
+<style scoped>
 .app{
   background: ghostwhite;
 }
@@ -46,7 +46,7 @@ export default {
   margin: 0 auto;
 }
 .footer {
-	border-top: 1px solid #red;
+	border-top: 1px solid #EDEDED;
 	clear: both;
 	width: 100%;
 	height: 103px;

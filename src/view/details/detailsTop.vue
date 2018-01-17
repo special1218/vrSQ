@@ -76,7 +76,7 @@
 								<a href="">VR公开课</a>
 							</li>
 							<li>
-								<a href="">VR社区</a>
+								<a href="">VR社区</a>''
 							</li>
 						</ul>
 						<div id="search">
