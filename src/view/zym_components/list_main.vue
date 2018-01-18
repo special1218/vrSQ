@@ -64,7 +64,7 @@ export default {
 }
 </script>
 
-<style scoped="scoped">
+<style scoped>
 .left{
 	border: 1px solid beige;
 	float: left;

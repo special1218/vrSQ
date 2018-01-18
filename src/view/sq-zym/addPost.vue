@@ -8,6 +8,14 @@
 		</p>
 		<p>
 			分类ID：<input type="text" v-model="temp.category_id" />
+			<!-- <select name="" id="">
+				<option value="">VR聊吧</option>
+				<option value="">VR硬件</option>
+				<option value="">VR软件</option>
+				<option value="">AR|MR讨论区</option>
+				<option value="">VR资源下载</option>
+				<option value="">VR视景仿真</option>
+			</select> -->
 		</p>
 		<p>
 			creater_id：<input type="text" v-model="temp.creater_id" />
@@ -45,12 +53,12 @@
 	}
 </script>
 
-<style scoped="scoped">
+<style scoped>
 	* {
 		margin: 0;
 		padding: 0;
 	}
-	#app{
+	#app{0
 		width: 300px;
 		height: 500px;
 		margin: 0 auto;
